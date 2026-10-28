@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.EducationController"
+      spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+
+    <TableView fx:id="tblEducation" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colSchool" text="Okul" prefWidth="150"/>
+            <TableColumn fx:id="colDepartment" text="Bölüm" prefWidth="150"/>
+            <TableColumn fx:id="colStart" text="Başlangıç" prefWidth="100"/>
+            <TableColumn fx:id="colEnd" text="Bitiş" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtSchool" promptText="Okul"/>
+        <TextField fx:id="txtDepartment" promptText="Bölüm"/>
+        <TextField fx:id="txtStart" promptText="Başlangıç"/>
+        <TextField fx:id="txtEnd" promptText="Bitiş"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Ekle" onAction="#addEducation"/>
+        <Button text="Sil" onAction="#deleteEducation"/>
+    </HBox>
+
+</VBox>

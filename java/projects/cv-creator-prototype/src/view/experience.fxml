@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ExperienceController"
+      spacing="10">
+
+    <padding>
+        <Insets top="20" left="20"/>
+    </padding>
+
+    <TableView fx:id="tblExperience" prefHeight="220">
+        <columns>
+            <TableColumn fx:id="colCompany" text="Şirket" prefWidth="150"/>
+            <TableColumn fx:id="colPosition" text="Pozisyon" prefWidth="150"/>
+            <TableColumn fx:id="colStart" text="Başlangıç" prefWidth="100"/>
+            <TableColumn fx:id="colEnd" text="Bitiş" prefWidth="100"/>
+            <TableColumn fx:id="colDesc" text="Açıklama" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtCompany" promptText="Şirket"/>
+        <TextField fx:id="txtPosition" promptText="Pozisyon"/>
+        <TextField fx:id="txtStart" promptText="Başlangıç"/>
+        <TextField fx:id="txtEnd" promptText="Bitiş"/>
+    </HBox>
+
+    <TextField fx:id="txtDescription" promptText="Açıklama" />
+
+    <HBox spacing="10">
+        <Button text="Ekle" onAction="#addExperience"/>
+        <Button text="Sil" onAction="#deleteExperience"/>
+    </HBox>
+
+</VBox>

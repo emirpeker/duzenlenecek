@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #ffffff;
+}
+
+/* Genel label stilleri */
+QLabel {
+    color: #222222;
+    font-size: 14px;
+}
+
+/* Başlık (Login) */
+QLabel#titleLabel {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Input alanları */
+QLineEdit {
+    background-color: #f2f2f2;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: #000000;
+}
+
+QLineEdit:focus {
+    border: 2px solid #377dff;
+}
+
+/* Login Butonu */
+#btn_login {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#btn_login:hover {
+    background-color: #1668d8;
+}
+
+#btn_login:pressed {
+    background-color: #0f4fb5;
+}
+
+/* &quot;Sign Up!&quot; link */
+#label_5 {
+    color: #1a73e8;
+    font-weight: bold;
+}
+
+#label_5:hover {
+    color: #4d90fe;
+    text-decoration: underline;
+}
+</string>
+  </property>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>30</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Login</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_username">
+   <property name="geometry">
+    <rect>
+     <x>39</x>
+     <y>99</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Username or Email</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_password">
+   <property name="geometry">
+    <rect>
+     <x>39</x>
+     <y>160</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Password</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_login">
+   <property name="geometry">
+    <rect>
+     <x>39</x>
+     <y>210</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Login</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>260</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Don't you have an account?</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>285</y>
+     <width>201</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;a href=&quot;#&quot;&gt;Sign Up!&lt;/a&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

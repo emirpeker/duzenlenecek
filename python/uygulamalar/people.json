@@ -1,0 +1,10 @@
+{
+    "name": "Burak",
+    "age": 22,
+    "city": "İstanbul",
+    "hobbies": [
+        "Kodlama",
+        "Müzik",
+        "Spor"
+    ]
+}

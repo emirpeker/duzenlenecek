@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.EditProfileController"
+      spacing="10">
+
+    <padding>
+        <Insets top="20" left="20"/>
+    </padding>
+
+    <Label text="Profili Düzenle" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="txtName" promptText="Ad Soyad"/>
+    <TextField fx:id="txtEmail" promptText="Email"/>
+    <TextArea fx:id="txtSummary" promptText="Özet Bilgi" prefRowCount="5"/>
+
+    <Button text="Kaydet" onAction="#saveProfile"/>
+
+</VBox>

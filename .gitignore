@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+
+# IDE files
+.idea/
+.vs/
+*.iml
+*.suo
+*.user
+*.vsidx
+*.wsuo
+
+# C# / .NET
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Java
+out/
+*.class
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# C / C++
+*.o
+*.obj
+
+# Local secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Academic and personal documents
+*.docx
+*.pdf
+
+# Internship files - kept locally
+c#/staj_dosyaları/
+
+# Local data and temporary exercises
+python/uygulamalar/phonebook.txt
+python/Python
+**/tempCodeRunnerFile.py
+
+# Local databases
+*.db
+
+# Assignment and submission archives
+*.zip
+
+# Maven build outputs
+target/
+
+# Local database dump with example user records
+/python/projects/rentify-course/rentacarr.sql
+/c-cpp/assignments/homework-8/veri.dat
+/c-cpp/assignments/university/4.1Ödev
+/c-cpp/assignments/university/5.1

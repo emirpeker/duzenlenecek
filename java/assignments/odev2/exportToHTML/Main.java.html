@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span>
+<span class="s0">class </span><span class="s1">Sarki</span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">String ad</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String sanatci</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String album</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">sure</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Sarki</span><span class="s2">(</span><span class="s1">String ad</span><span class="s2">, </span><span class="s1">String sanatci</span><span class="s2">, </span><span class="s1">String album</span><span class="s2">, </span><span class="s0">int </span><span class="s1">sure</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">ad </span><span class="s2">= </span><span class="s1">ad</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">sanatci </span><span class="s2">= </span><span class="s1">sanatci</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">album </span><span class="s2">= </span><span class="s1">album</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">sure </span><span class="s2">= </span><span class="s1">sure</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">String getAd</span><span class="s2">() {</span><span class="s0">return </span><span class="s1">ad</span><span class="s2">;}</span>
+    <span class="s0">public int </span><span class="s1">getSure</span><span class="s2">() {</span><span class="s0">return </span><span class="s1">sure</span><span class="s2">;}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">String toString</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">ad</span><span class="s2">+</span><span class="s3">&quot; - &quot;</span><span class="s2">+</span><span class="s1">sanatci</span><span class="s2">+</span><span class="s3">&quot; ( &quot;</span><span class="s2">+</span><span class="s1">album</span><span class="s2">+</span><span class="s3">&quot; ) | &quot;</span><span class="s2">+</span><span class="s1">sure</span><span class="s2">+</span><span class="s3">&quot; dk&quot;</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+<span class="s0">class </span><span class="s1">MuzikKolesikyonu</span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Sarki</span><span class="s2">&gt; </span><span class="s1">sarkilar</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">MuzikKolesikyonu</span><span class="s2">() {</span>
+        <span class="s1">sarkilar </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;&gt;();</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">ekle</span><span class="s2">(</span><span class="s1">Sarki sarki</span><span class="s2">){</span>
+        <span class="s1">sarkilar</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">sarki</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Sarki eklendi! --&gt;&quot;</span><span class="s2">+</span><span class="s1">sarki</span><span class="s2">.</span><span class="s1">getAd</span><span class="s2">());</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">kaldir</span><span class="s2">(</span><span class="s1">String ad</span><span class="s2">){</span>
+        <span class="s0">for</span><span class="s2">(</span><span class="s1">Sarki sarki </span><span class="s2">: </span><span class="s1">sarkilar</span><span class="s2">) {</span>
+            <span class="s0">if</span><span class="s2">(</span><span class="s1">sarki</span><span class="s2">.</span><span class="s1">getAd</span><span class="s2">().</span><span class="s1">equals</span><span class="s2">(</span><span class="s1">ad</span><span class="s2">)){</span>
+                <span class="s1">sarkilar</span><span class="s2">.</span><span class="s1">remove</span><span class="s2">(</span><span class="s1">sarki</span><span class="s2">);</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Sarki silindi! --&gt;&quot;</span><span class="s2">+</span><span class="s1">ad</span><span class="s2">);</span>
+                <span class="s0">return</span><span class="s2">;</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Sarki bulunamadi! &quot;</span><span class="s2">+</span><span class="s1">ad</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">ara</span><span class="s2">(</span><span class="s1">String ad</span><span class="s2">){</span>
+        <span class="s0">for</span><span class="s2">(</span><span class="s1">Sarki sarki</span><span class="s2">:</span><span class="s1">sarkilar</span><span class="s2">){</span>
+            <span class="s0">if</span><span class="s2">(</span><span class="s1">sarki</span><span class="s2">.</span><span class="s1">getAd</span><span class="s2">().</span><span class="s1">equals</span><span class="s2">(</span><span class="s1">ad</span><span class="s2">)){</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Sarki bulundu! --&gt;&quot;</span><span class="s2">+</span><span class="s1">sarki</span><span class="s2">);</span>
+                <span class="s0">return</span><span class="s2">;</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Sarki bulunamadi! &quot;</span><span class="s2">+</span><span class="s1">ad</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">listele</span><span class="s2">(){</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Sarki Listesi:&quot;</span><span class="s2">);</span>
+        <span class="s0">for</span><span class="s2">(</span><span class="s1">Sarki sarki</span><span class="s2">:</span><span class="s1">sarkilar</span><span class="s2">){</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;* &quot;</span><span class="s2">+</span><span class="s1">sarki</span><span class="s2">);</span>
+        <span class="s2">}</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Toplam süre: &quot;</span><span class="s2">+</span><span class="s1">toplam_sure</span><span class="s2">()+</span><span class="s3">&quot;dk</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public int </span><span class="s1">toplam_sure</span><span class="s2">(){</span>
+        <span class="s0">int </span><span class="s1">toplam</span><span class="s2">=</span><span class="s4">0</span><span class="s2">;</span>
+        <span class="s0">for</span><span class="s2">(</span><span class="s1">Sarki sarki</span><span class="s2">:</span><span class="s1">sarkilar</span><span class="s2">){</span>
+            <span class="s1">toplam</span><span class="s2">+=</span><span class="s1">sarki</span><span class="s2">.</span><span class="s1">getSure</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s0">return </span><span class="s1">toplam</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+<span class="s0">class </span><span class="s1">Kullanici</span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">String ad</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String soyad</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">MuzikKolesikyonu kolesikyon</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Kullanici</span><span class="s2">(</span><span class="s1">String ad</span><span class="s2">, </span><span class="s1">String soyad</span><span class="s2">){</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">ad </span><span class="s2">= </span><span class="s1">ad</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">soyad </span><span class="s2">= </span><span class="s1">soyad</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">kolesikyon </span><span class="s2">= </span><span class="s0">new </span><span class="s1">MuzikKolesikyonu</span><span class="s2">();</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">Sarki_ekle</span><span class="s2">(</span><span class="s1">Sarki sarki</span><span class="s2">){</span>
+        <span class="s1">kolesikyon</span><span class="s2">.</span><span class="s1">ekle</span><span class="s2">(</span><span class="s1">sarki</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">Sarki_kaldir</span><span class="s2">(</span><span class="s1">String ad</span><span class="s2">){</span>
+        <span class="s1">kolesikyon</span><span class="s2">.</span><span class="s1">kaldir</span><span class="s2">(</span><span class="s1">ad</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">Sarki_ara</span><span class="s2">(</span><span class="s1">String ad</span><span class="s2">){</span>
+        <span class="s1">kolesikyon</span><span class="s2">.</span><span class="s1">ara</span><span class="s2">(</span><span class="s1">ad</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">Sarki_listele</span><span class="s2">(){</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Kullanici: &quot;</span><span class="s2">+</span><span class="s1">ad</span><span class="s2">+</span><span class="s3">&quot; &quot;</span><span class="s2">+</span><span class="s1">soyad</span><span class="s2">);</span>
+        <span class="s1">kolesikyon</span><span class="s2">.</span><span class="s1">listele</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s0">public class </span><span class="s1">Main </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">Kullanici kullanici</span><span class="s2">=</span><span class="s0">new </span><span class="s1">Kullanici</span><span class="s2">(</span><span class="s3">&quot;Emir&quot;</span><span class="s2">,</span><span class="s3">&quot;Peker&quot;</span><span class="s2">);</span>
+
+        <span class="s1">Sarki sarki1</span><span class="s2">=</span><span class="s0">new </span><span class="s1">Sarki</span><span class="s2">(</span><span class="s3">&quot;Let It Happen&quot;</span><span class="s2">,</span><span class="s3">&quot;Tame Impala&quot;</span><span class="s2">,</span><span class="s3">&quot;Currents&quot;</span><span class="s2">,</span><span class="s4">7</span><span class="s2">);</span>
+        <span class="s1">Sarki sarki2</span><span class="s2">=</span><span class="s0">new </span><span class="s1">Sarki</span><span class="s2">(</span><span class="s3">&quot;We Are The People&quot;</span><span class="s2">,</span><span class="s3">&quot;Empire Of The Sun&quot;</span><span class="s2">,</span><span class="s3">&quot;Walking On A Dream&quot;</span><span class="s2">,</span><span class="s4">4</span><span class="s2">);</span>
+        <span class="s1">Sarki sarki3</span><span class="s2">=</span><span class="s0">new </span><span class="s1">Sarki</span><span class="s2">(</span><span class="s3">&quot;Sorma&quot;</span><span class="s2">,</span><span class="s3">&quot;Sezen Aksu&quot;</span><span class="s2">,</span><span class="s3">&quot;Yürüyorum Düş Bahçeleri'nde..&quot;</span><span class="s2">,</span><span class="s4">4</span><span class="s2">);</span>
+
+        <span class="s1">kullanici</span><span class="s2">.</span><span class="s1">Sarki_ekle</span><span class="s2">(</span><span class="s1">sarki1</span><span class="s2">);</span>
+        <span class="s1">kullanici</span><span class="s2">.</span><span class="s1">Sarki_ekle</span><span class="s2">(</span><span class="s1">sarki2</span><span class="s2">);</span>
+        <span class="s1">kullanici</span><span class="s2">.</span><span class="s1">Sarki_ekle</span><span class="s2">(</span><span class="s1">sarki3</span><span class="s2">);</span>
+
+        <span class="s1">kullanici</span><span class="s2">.</span><span class="s1">Sarki_listele</span><span class="s2">();</span>
+        <span class="s1">kullanici</span><span class="s2">.</span><span class="s1">Sarki_ara</span><span class="s2">(</span><span class="s3">&quot;We Are The People&quot;</span><span class="s2">);</span>
+        <span class="s1">kullanici</span><span class="s2">.</span><span class="s1">Sarki_kaldir</span><span class="s2">(</span><span class="s3">&quot;Sorma&quot;</span><span class="s2">);</span>
+
+        <span class="s1">kullanici</span><span class="s2">.</span><span class="s1">Sarki_listele</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
